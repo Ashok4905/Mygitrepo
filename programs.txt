@@ -1,0 +1,3759 @@
+
+FINDING AVERAGE OF NUMBERS
+size = int(input('Enter number of elements : '))
+arr = []
+for i in range(0,size):
+    elem = int(input('Please give value of the index ' +str(i)+ ' '))
+    arr.append(elem)
+avg = sum(arr)/size
+print('Average of all elements is ' +str(avg))
+
+
+
+ARMSTRONG NUMBER
+import math
+n = int(input('Enter the number: '))
+temp = n
+arm = 0
+l = len(str(n))
+while temp!= 0:
+    a = (temp%10)
+    arm = arm + pow(a, l)
+    temp = (temp//10)
+if arm == n:
+    print('It is an armstrong number')
+else:
+    print('It is not an armstrong number')
+
+
+
+PRIME NUMBER
+n = int(input('Enter the number : '))
+count = 0
+i = 0
+for i in range(2,n//2):
+    if n % i == 0:
+        count += 1
+if count == 1:
+    print('It is not a prime number')
+else:
+    print('It is a prime number')
+
+
+FACTORIAL OF THE NUMBER
+n = int(input('Enter the number: '))
+fact = 1
+for i in range(1,n+1):
+    fact = fact*i
+    i += 1
+print('Factorial of a number is ',fact)
+
+
+
+
+PRINTING A TRAINGLE
+#include <stdio.h>
+int main()
+{
+    printf("    |\n");
+    printf("   /|\n");
+    printf("  / |\n");
+    printf(" /  |\n");
+    printf("/__ |\n");
+
+    return 0;
+}
+
+
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char characterName[]="Ashok";
+    int characterAge = 23;
+    printf("There is a person named %s\n", characterName);
+    printf("Age of the person is %d\n", characterAge);
+
+    characterAge= 1000;
+    printf("%s is very good person\n", characterName);
+    printf("That person has %d ice creams\n", characterAge);
+
+
+    return 0;
+}
+
+
+
+
+
+
+int main()
+{
+    int age =23;
+    float CGPA = 7.97;
+    char Grade = 'A';
+    char phrase[]= "SVU";
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int favNum = 6;
+    char MyChar[] = "number" ;
+    printf("My favourite %s is %d", MyChar, favNum);
+    return 0;
+}
+
+
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    /* The below shows the logic of the program*/
+    printf("%f", sqrt(36));
+    return 0;
+}
+
+
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    /* MULTIPLICATION OF NUMBERS*/
+    int a,b,c;
+    printf("Enter two Numbers\n");
+    scanf("%d %d", &a, &b);
+    c = a*b;
+    printf("Multiplication = %d", a*b);
+    return 0;
+}
+
+
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int max(int num1, int num2)
+{
+    int result;
+    if(num1 > num2)
+    {
+         result = num1;
+    }
+    else 
+    { 
+         result = num2; 
+    }
+    return result;
+}
+
+int main()
+{
+    printf("%d", max(4,10));
+    return 0;
+}
+IT CAN ALSO WRITTEN BY USING TERNARY OPERATION 
+max= If(num1>num2) ? num1 : num2;
+
+
+
+
+
+
+
+int max(int num1, int num2, int num3)
+{
+    int result;
+    if (num1 >= num2 && num1 >= num3)
+    {
+        result = num1;
+    }
+    else if(num2 >= num1 && num2 >= num3)
+    {
+        result = num2;
+    }
+    else{result = num3;}
+    return result;
+}
+
+int main()
+{
+    printf("%d", max(4,10,16));
+    return 0;
+}
+
+
+
+
+
+
+
+#include <stdio.h>
+int main()
+{
+    int a=1;
+    while(a<=10)
+    {
+        printf("%d\t", a);
+        a++;
+    }
+    return 0;
+}
+output 1 2 3 4 5 6 7 8 9 10
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int a=0;
+    do
+    {
+        printf("value of the variable a is : %d\n", a);
+        a++;
+    }while(a<=10);
+      return 0;
+}
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int First_array[10] = {1,2,3,4,5,6,7,8,9,10};
+    int *ptr;
+    ptr = First_array;
+    for(int i=0; i<10; i++)
+    {
+        printf("Value of *ptr variable = %d\n", *ptr);
+        printf("Value of ptr variable = %p\n", ptr);
+        ptr++;
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int i;
+    int empID;
+
+    for(i=0;i<3;i++)
+    {
+        printf("empID[%d]\n", i);
+        scanf("%d", &empID);
+    }
+    return 0;
+}
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int a[2][3];
+    int i,j;
+    for(i=0;i<2;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            printf("Enter the value for a[%d][%d] :\n ", i,j);
+            scanf("%d", &a[i][j]);
+        }
+    }
+    printf("Two Dimensional array elements :\n");
+    for(i=0;i<2;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            printf(" %d  ", a[i][j]);
+            if(j==2)
+            {
+                printf("\n");
+            }
+        }
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int length;
+    char ch[10]={'a','s','h','o','k',};
+    printf("length of the string is : %d", strlen(ch));
+    return 0;
+}
+
+
+
+
+
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char ch1[20]={'a','s','h','o','k'};
+    char ch2[20];
+    strcpy(ch2,ch1);
+    printf("Secondstring is : %s", ch2);
+    return 0;
+}
+
+
+
+
+STRING COMPARING
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str1[20],str2[20];
+    printf("Enter the first string :");
+    scanf("%s", &str1);
+    printf("Enter the second string :");
+    scanf("%s", &str2);
+    if(strcmp(str1,str2)==0)
+        printf("%d\n strings are equal", strcmp(str1,str2));
+    else
+        printf("%d\n strings are not equal", strcmp(str1,str2));
+    return 0;
+}
+
+
+
+
+
+STRING CONCATENATION= JOINING TWO STRINGS
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char ch1[10]={'A','s','h','o','k'};
+    char ch2[20]={' i','s',' a',' g','o','o','d',' b','o','y'};
+    strcat(ch1,ch2);
+    printf("Strings after combining both : %s", ch1);
+    return 0;
+}
+
+
+
+REVERSING OF STRING
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char a[20]={"ashok is a good boy"};
+    printf("The given string is : %s\n", a);
+    printf("String after reversing: %s", strrev(a));
+    return 0;
+}
+
+
+
+
+
+
+UPPER CASE ALPHABETS TO LOWER CASE ALPHABETS
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char a[20];
+    printf("Enter the UPPER case string :");
+    scanf("%s", &a);
+    printf("\nLOWER string is :%s", strlwr(a));
+    return 0;
+}
+
+
+
+
+LOWER CASE ALPHABETS TO UPPER CASE ALPHABETS
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char a[20];
+    printf("Enter the LOWER string :");
+    scanf("%s", &a);
+    printf("UPPER string is : %s", strupr(a));
+    return 0;
+}
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    char name[20];
+    int roll_number[5],i;
+    float marks[5];
+    for (i=0;i<3;i++)
+    {
+        printf("Enter the name, roll_number and marks of the student-%d ", i+1);
+        scanf("%s %d %f", &name[i], &roll_number[i], &marks[i]);
+    }
+    printf("Student details....\n");
+    for (i=0;i<3;i++)
+        {
+            printf("%s %d %f\n", name[i], roll_number[i], marks[i]);
+        }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+#include<stdio.h>3
+#include<string.h>
+union employee
+{
+ int id;
+ char name[50];
+}e1;
+int main()
+{
+    e1.id=101;
+    strcpy(e1.name, "ashok");
+    printf("employee 1 id : %d\n", e1.id);
+     printf("employee 1 name : %s\n", e1.name);
+     return 0;
+}
+
+
+
+
+
+
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int i,id[3];
+    char name[10];
+    for(i=0;i<2;i++)
+    {
+          printf("Enter the employee details...\n");
+          scanf("%d  %s", &id[i], &name[i]);
+    }
+    printf("Student details...\n");
+    for(i=0;i<2;i++)
+    {
+        printf("%d  %s", id[i], name[i]);
+    }
+  return 0;
+}
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    /*FINDING EVEN OR ODD NUMBER*/
+    int a;
+    printf("Enter the number :");
+    scanf("%d", &a);
+    if(a%2==0)
+        printf("%d is Even number", a);
+    else
+        printf("%d is Odd number", a);
+    return 0;
+}
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    /*FINDING PRIME OR COMPOSITE NUMBER*/
+    int a,i,count=0;
+    printf("Enter the number :");
+    scanf("%d", &a);
+    for (i=2;i<=a;i++)
+    {
+        if(a%i==0)
+        {
+            count++;
+        }
+    }
+        if(count==1)
+            printf("It is prime number");
+        else
+            printf("It is composite number");
+        return 0;
+}
+
+
+
+
+
+
+
+
+LEAP YEAR
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("Enter thE YEAR :");
+    scanf("%d", &n);
+    if(n%400==0)
+        printf(" It is a leap year");
+    else if(n%100==0)
+        printf("It is not a leap year");
+    else if(n%4==0)
+        printf("It is a leap year");
+    else
+        printf("It is not a leap year");
+    return 0;
+}
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    /*FINDING MAXIMUM OF 3 NUMBERS*/
+    int a,b,c;
+    printf("Enter the numbers :");
+    scanf("%d %d %d", &a, &b, &c);
+    if(a>b&&a>c)
+        {
+        printf("Max number is %d", a);
+        }
+        else if (b>a&&b>c)
+        {
+            printf("Max number is %d",b);
+        }
+        else
+            printf("Max number is %d",c);
+        return 0;
+
+}
+
+
+
+
+FINDING MAXIMUM OF 10 NUMBERS
+#include<stdio.h>
+int main()
+{
+    int a[10],max,i;
+    printf("Enter the numbers :");
+    for(i=0;i<10;i++)
+    {
+        scanf("%d", &a[i]);
+    }
+    max=0;
+    for(i=0;i<10;i++)
+    {
+        if(a[i]>max)
+        {
+            max=a[i];
+        }
+    }
+    printf("Max number : %d", a[i]);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+max and min of 3numbers
+
+#include<stdio.h>
+int main()
+{
+    int a,b,c;
+    printf("Enter the numbers :");
+    scanf("%d %d %d", &a, &b, &c);
+    if(a>b&&a>c)
+        {
+        printf("Max number is %d", a);
+        }
+        else if (b>a&&b>c)
+        {
+            printf("Max number is %d",b);
+        }
+        else
+        {
+            printf("Max number is %d\n",c);
+        }
+        if(a<b&&a<c)
+        {
+            printf("Min number is %d",a);
+        }
+        else if(b<a&&b<c)
+        {
+            printf("Min number is %d",b);
+        }
+        else
+        {
+            printf("Min number is %d",c);
+        }
+
+        return 0;
+
+}
+
+
+
+
+max and minimum of 5numbers
+(USING TERNARY OPERTION)
+#include<stdio.h>
+int main()
+{
+    int n=0,i;
+    printf("Enter the numbers:");
+    scanf("%d", &n);
+    int min=0, max=0;
+    for(i=0;i<5;i++)
+    {
+        scanf("%d", &n);
+        min=(n<min)? n:min;
+        max=(n>max)? n:max;
+    }
+    printf("min=%d, max=%d", min, max);
+    return 0;
+}
+
+
+
+
+REVERSING OF NUMBER
+#include<stdio.h>
+int main()
+{
+    int rev=0,n;
+    printf("Enter the number :");
+    scanf("%d", &n);
+    while (n!=0)
+    {
+        rev=rev*10+n%10;
+        n=n/10;
+    }
+    printf("%d", rev);
+    return 0;
+}
+
+
+
+
+
+ARMSTRONG NUMBER
+371 = (3*3*3)+(7*7*7)+(1*1*1) = 371
+
+#include<stdio.h>
+int main()
+{
+    int num,num1,rem,sum=0;
+    printf("Enter the number :");
+    scanf("%d", &num);
+    num1=num;
+    while (num!=0)
+    {
+        rem= num%10;
+        sum=sum+(rem*rem*rem);
+        num = num/10;
+    }
+    if(num1==sum)
+    {
+        printf("%d is an Armstrong number", num1);
+    }
+    else
+    {
+        printf("%d is not an Armstrong number", num1);
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+SUM OF DIGITS IN A NUMBER
+#include<stdio.h>
+int main()
+{
+    int n, sum=0;
+    printf("Enter the number :");
+    scanf("%d", &n);
+    while(n!=0)
+    {
+        sum=sum+n%10;
+        n=n/10;
+    }
+    printf("The sum of digits in the number = %d",sum);
+    return 0;
+}
+
+
+
+
+
+PALINDROME NUMBERS
+#include<stdio.h>
+int main()
+{
+    int rev=0,n,temp;
+    printf("Enter the number :");
+    scanf("%d", &n);
+    temp=n;
+    while(temp!=0)
+    {
+        rev=rev*10+temp%10;
+        temp=temp/10;
+    }
+    if(rev==n)
+    {
+        printf("The number %d is a palindrome", n);
+    }
+    else
+        printf("The number %d is not a palindrome", n);
+    return 0;
+}
+
+
+
+FACTORIAL OF A NUMBER
+#include<stdio.h>
+int main()
+{
+    int n,product;
+    printf("Enter the number:");
+    scanf("%d", &n);
+    product=n;
+    while(n>1)
+    {
+        product=product*(n-1);
+        n--;
+    }
+    printf("Factorial of number = %d", product);
+    return 0;
+}
+
+
+
+
+
+
+FIBONACCI SERIES
+
+#include<stdio.h>
+int main()
+{
+    int num1=0,num2=1,num3,i,n;
+    printf("Enter n value:");
+    scanf("%d", &n);
+    for(i=0;i<n;i++)
+    {
+        {
+            num3=num1+num2;
+            num1=num2;
+            num2=num3;
+        }
+        printf("%d\n", num3);
+    }
+
+    return 0;
+}
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    int a,b,c;
+    printf("Enter the numbers :");
+    scanf("%d %d %d", &a,&b,&c);
+    if(a>b&&a>c)
+        printf("%d is greater", a);
+    else if (b>a&&b>c)
+        printf("%d is greater",b);
+    else
+        printf("%d is greater",c);
+    return 0;
+}
+
+
+
+
+CALCULATOR
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    float num1,num2;
+    char op;
+    printf("Enter the number1 :\n");
+    scanf("%f", &num1);
+    printf("Enter the operator :\n");
+    scanf("%s", &op);
+    printf("Enter the number2 :\n");
+    scanf("%f", &num2);
+    if(op=='+')
+        printf("%f", num1+num2);
+    else if(op=='-')
+        printf("%f", num1-num2);
+    else if(op=='*')
+        printf("%f", num1*num2);
+    else if(op== '/')
+        printf("%f", num1 / num2);
+        else
+            printf("Enter valid operator");
+    return 0;
+}
+
+
+
+
+
+SWITCH STATEMENT 
+#include<stdio.h>
+int main()
+{
+    char grade;
+    printf("Enter the grade:");
+    scanf("%s", &grade );
+    switch(grade)
+    {
+    case 'A':
+        printf("Outstanding");
+        break;
+    case 'B':
+        printf("Good");
+        break;
+    case 'c':
+        printf("Average");
+        break;
+    case 'D':
+        printf("Must Improve");
+        break;
+    }
+        return 0;
+}
+
+
+
+
+
+GUESS THE NUMBER
+#include<stdio.h>
+int main()
+{
+    int secretNumber=5, guess=0;
+    while(guess!=secretNumber)
+    {
+        printf("Enter the number :");
+        scanf("%d", &guess);
+    }
+    printf("You Win!!");
+    return 0;
+}
+
+
+
+
+MATRICES
+#include<stdio.h>
+int main()
+{
+    int a[3][2];
+    int i,j;
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<2;j++)
+        {
+            printf("Enter the elements :");
+            scanf("%d", &a[i][j]);
+        }
+    }
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<2;j++)
+        {
+            printf("%d  ", a[i][j]);
+            if(j==1)
+                printf("\n");
+        }
+    }
+
+    return 0;
+
+}
+
+
+
+
+
+%p is used for memory address
+MEMORY ADDRESS
+#include<stdio.h>
+int main()
+{
+    int age=30;
+    float GPA=9.57;
+    char Grade= 'A';
+    printf("age : %p\n GPA: %p\n Grade: %p\n", &age,&GPA,&Grade);
+    return 0;
+}
+
+
+
+
+
+FINDING PERFECT SQUARE
+#include <stdio.h>
+int main()
+{
+    int a,n;
+    printf("Enter the number :");
+    scanf("%d", &n);
+    for(a=0;a<=n;a++)
+    {
+        if(n==a*a)
+        {
+            printf("The number is a perfect square");
+            return 0;
+        }
+    }
+    printf("Number is not perfect square");
+
+    return 0;
+
+}
+
+
+
+
+
+
+
+PRINTING HELLO WORLD WITHOUT USING SEMICOLON
+#include <stdio.h>
+/*void main()
+{
+    if(printf("hello world")){}
+}*/
+/*void main()
+{
+    switch(printf("hello world")){}
+}*/
+void main()
+{
+    while(!printf("hello world")){}
+}
+
+
+
+
+
+Swapping two strings using 3rd variable(USING STRING COPY)
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char s1[200], s2[200], s3[200];
+    printf("Enter the first string s1 :\n");
+    scanf("%s", &s1);
+    printf("Enter the second string s2 :\n");
+    scanf("%s", &s2);
+    printf("Before Swapping:\n");
+    printf("String1 : %s\n", s1);
+    printf("String2 : %s\n\n", s2);
+    strcpy(s3,s1);
+    strcpy(s1,s2);
+    strcpy(s2,s3);
+    printf("After Swapping:\n");
+    printf("String1 : %s\n", s1);
+    printf("String2 : %s\n", s2);
+
+}
+
+
+
+
+
+
+SWAPPING WITHOUT USING STRINGS
+#include<stdio.h>
+int main()
+{
+    char s1[20], s2[20], s3[20];
+    int i=0;
+    printf("Enter the first string s1 :\n");
+    scanf("%s", &s1);
+    printf("Enter the second string s2 :\n");
+    scanf("%s", &s2);
+    printf("Before Swapping:\n");
+    printf("String1 : %s\n", s1);
+    printf("String2 : %s\n\n", s2);
+    while(s1[i]!='\0')
+    {
+         s3[i]=s1[i];
+         s1[i]=s2[i];
+         s2[i]=s3[i];
+         i++;
+    }
+
+    printf("After Swapping:\n");
+    printf("String1 : %s\n", s1);
+    printf("String2 : %s\n", s2);
+
+}
+
+
+
+
+
+SWAPPING 2 VARIABLES WITHOUT USING 3rd VARIABLE
+#include<stdio.h>
+int main()
+{
+    int a,b;
+    printf("Enter a : ");
+    scanf("%d",&a);
+    printf("Enter b : ");
+    scanf("%d", &b);
+    printf("The values of a and b before swapping are %d and %d\n ", a,b);
+   
+ /*a=a+b;
+    b=a-b;
+    a=a-b;*/
+
+
+    a=a*b;
+    b=a/b;
+    a=a/b;
+    printf("The values of a and b after swapping are %d and %d", a ,b);
+    return 0;
+}
+
+
+TEMPERATURES
+
+#include <stdio.h>
+int main()
+{
+    int a,temp,temp1;
+    printf("Celsius to Fahrenheit(Press 1)or\n Fahrenheit to Celsius(Press 2): ");
+    scanf("%d", &a);
+    printf("Enter the temperature:");
+    scanf("%d", &temp);
+    switch(a)
+    {
+    case 1 :
+        temp1 = 9*temp/5 + 32;
+        printf("temperature in Fahrenheit is %d", temp1);
+        break;
+    case 2 :
+        temp1 = (temp-32)*5/9;
+        printf("temperature in Celsius is %d", temp1);
+        break;
+    }
+    return 0;
+}
+
+
+
+
+OCCURANCE OF ELEMENT IN 1-D ARRAY
+#include<stdio.h>
+int main()
+{
+    int arr[20], n, i,num,count;
+    printf("Enter total no. of elements :");
+    scanf("%d", &n);
+    printf("Enter array elements :\n");
+    for(i=0;i<n;i++)
+    {
+        printf("Enter the element %d  ", i+1);
+        scanf("%d",&arr[i]);
+    }
+    printf("Enter the number to find occurence :");
+    scanf("%d", &num);
+    count=0;
+    for(i=0;i<n;i++)
+    {
+        if(arr[i]==num)
+        count++;
+    }
+    printf("Occurence of %d is : %d\n", num, count+1);
+    return 0;
+}
+
+
+
+
+SWAPPING ADJACENT ELEMENTS IN 1-D ARRAY
+#include<stdio.h>
+int main()
+{
+    int arr[20], n, i,temp;
+    printf("Enter total no. of elements :");
+    scanf("%d", &n);
+    if(n%2!=0)
+    {
+        printf("Total number of elements must be even");
+        return 0;
+    }
+    printf("Enter array elements :\n");
+    for(i=0;i<n;i++)
+    {
+        printf("Enter the element %d :", i+1);
+        scanf("%d",&arr[i]);
+    }
+    for(i=0;i<n;i+=2)
+    {
+        temp=arr[i];
+        arr[i]=arr[i+1];
+        arr[i+1]=temp;
+    }
+    printf("\nArray elements after swapping adjacent elements:\n");
+    for(i=0;i<n;i++)
+    {
+        printf("%d\n",arr[i]);
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+FIBONACII SERIES WITHOUT USING RECURSION
+#include<stdio.h>
+int main()
+{
+    int a=0,b=1,n,i,sum;
+    printf("Enter the number of terms: ");
+    scanf("%d", &n);
+    printf("Fibonacii series is : ");
+    printf("%d\t  %d\t", a,b);
+    for(i=0;i<n;i++)
+    {
+        sum=a+b;
+        printf("%d\t", sum);
+        a=b;
+        b=sum;
+    }
+    printf("\n");
+    return 0;
+}
+
+
+
+
+
+
+
+FINDING PRIME FACTORS
+#include<stdio.h>
+int main()
+{
+    int n,i;
+    printf("Enter the number : ");
+    scanf("%d", &n);
+    while(n%2==0)
+    {
+        printf("%d,  ", 2);
+        n=n/2;
+
+    }
+
+    for(i=3;i<=sqrt(n);i+=2)
+    {
+        while(n%i==0)
+        {
+            printf("%d, ", i);
+            n=n/i;
+        }
+    }
+    if(n>2)
+        printf("%d", n);
+    return 0;
+}
+
+
+
+
+COUNTING VOWELS and CONSONANTS
+#include<stdio.h>
+int main()
+{
+    int i,vowels=0, consonants=0;
+    char s[30];
+    printf("Enter the sentence : ");
+    scanf("%s", &s);
+    for(i=0;s[i]!='\0';i++)
+    {
+        if(s[i]=='A'||s[i]=='E'||s[i]=='I'||s[i]=='O'||s[i]=='U'||s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='o'||s[i]=='u')
+        {
+            vowels++;
+        }
+        else if(s[i]==' ')
+        {
+            continue;
+        }
+        else
+        {
+            consonants++;
+        }
+    }
+    printf("There are %d Vowels\n", vowels);
+    printf("There are %d consonants", consonants);
+    return 0;
+}
+
+
+
+
+
+printing symbol triangle
+*
+**
+***
+****
+*****
+******
+#include<stdio.h>
+int main()
+{
+    int i,j,num;
+    printf("Enter number of rows : ");
+    scanf("%d", &num);
+    for(i=1;i<=num;i++)
+    {
+        for(j=1;j<=i;j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+
+
+PRINTING SYMBOL TRIANGLE
+******
+*****
+****
+***
+**
+*
+#include<stdio.h>
+int main()
+{
+    int i,j,num;
+    printf("Enter number of rows : ");
+    scanf("%d", &num);
+    for(i=num;i>=1;i--)
+    {
+        for(j=i;j>=1;j--)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+
+
+
+printing symbol pattern
+*
+**
+***
+****
+*****
+****
+***
+**
+*
+#include<stdio.h>
+int main()
+{
+    int i,j,num;
+    printf("Enter number of rows : ");
+    scanf("%d", &num);
+    for(i=1;i<=num;i++)
+    {
+        for(j=1;j<=i;j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    for(i=num;i>=1;i--)
+    {
+        for(j=i;j>=1;j--)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+ASCII-American Standard Code for Information Interchange TABLE 
+30-39==0-9
+65-90==A-Z
+97-122==a-z
+ALPHABET PATTERN 
+
+    A
+   BBB 
+  CCCCC
+ DDDDDDD
+EEEEEEEEE
+#include<stdio.h>
+int main()
+{
+    int i,j,k,temp=1,rows,count, alpha=65;
+    printf("Enter no. of rows :");
+    scanf("%d", &rows);
+    count=rows-1;
+    for(i=1;i<=rows;i++)
+    {
+        for(j=1;j<=count;j++)
+        {
+            printf(" ");
+        }
+        for(k=1;k<=temp;k++)
+        {
+            printf("%c", alpha);
+        }
+        count--;
+        temp=temp+2;
+        alpha++;
+        printf("\n");
+    }
+    return 0;
+}
+
+
+
+
+
+
+DAYS TO YEARS,MONTHS,DAYS
+
+#include<stdio.h>
+int main()
+{
+    int n,years,months,days;
+    printf("Enter number of days : ");
+    scanf("%d", &n);
+    years=n/365;
+    months=(n%365)/30;
+    days=(n%365)%30;
+    printf("%d years %d months %d days", years, months, days);
+    return 0;
+
+}
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int i,sum=0,num1,num2;
+    printf("Enter number1 : ");
+    scanf("%d", &num1);
+    printf("Enter number2 : ");
+    scanf("%d", &num2);
+    for(i=num1;i<=num2;i++)
+    {
+        if(i%2==0)
+            sum=sum+i;
+    }
+    printf("The sum of all the digits between two numbers that are divisible by 2 is %d", sum);
+    return 0;
+}
+
+
+
+
+
+
+PERFECT NUMBER : THE SUM OF ALL THE DIVISORS IS EQUAL TO THE SAME NUMBER
+
+#include<stdio.h>
+int main()
+{
+    int n,i,sum=0;
+    printf("Enter the number : ");
+    scanf("%d", &n);
+    for(i=1;i<n;i++)
+    {
+        if(n%i==0)
+            sum=sum+i;
+    }
+    if(sum==n)
+        printf("The Number is perfect number");
+    else
+        printf("The Number is not perfect number");
+    return 0;
+}
+
+
+
+
+
+
+
+BUBBLE SORTING : COMPARING THE ELEMENTS WITH THE ADJACENT ELEMENTS AND SWAPPING(used for ascending/descending order)
+#include<stdio.h>
+int main()
+{
+    int n,i,j,arr[30],temp;
+    printf("Enter number of elements : ");
+    scanf("%d", &n);
+    printf("Enter the elements : \n");
+    for(i=0;i<n-1;i++)
+        scanf("%d\n", &arr[i]);
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n-1-i;j++)
+        {
+            if(arr[j]>arr[j+1])
+            {
+                temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+            }
+        }
+    }
+    printf("The Ascending order of given numbers is \n");
+    for(i=0;i<n;i++)
+    {
+        printf("%d\t", arr[i]);
+    }
+    return 0;
+}
+
+
+
+
+
+
+SIMPLE ASCENDING ORDER SORTING
+#include<stdio.h>
+int main()
+{
+    int n,i,j,a[30],temp;
+    printf("Enter number of elements : ");
+    scanf("%d", &n);
+    printf("Enter the elements : \n");
+    for(i=0;i<n;i++)
+        scanf("%d\n", &a[i]);
+    for(i=0;i<n;i++)
+    {
+        for(j=i+1;j<n;j++)
+        {
+            if(a[i]>a[j])
+            {
+                temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+        }
+    }
+    printf("The Ascending order of given numbers is \n");
+    for(i=0;i<n;i++)
+    {
+        printf("%d\t", a[i]);
+    }
+    return 0;
+}
+
+
+
+POLLING PROGRAM
+#include<stdio.h>
+int main()
+{
+    int n,sum1=0,sum2=0,sum3=0,i,a;
+    printf("Total number of participants : ");
+    scanf("%d", &n);
+    printf("What's ur opinion on ashok?\npress 1 for Good\npress 2 for bad\npress 3 for NOTA\n");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d", &a);
+        if(a==1)
+            sum1=sum1+1;
+        else if(a==2)
+            sum2=sum2+1;
+        else
+            sum3=sum3+1;
+    }
+    printf("Ashok is good boy : %d votes\n", sum1);
+    printf("Ashok is bad boy : %d votes\n", sum2);
+    printf("NOTA : %d votes", sum3);
+    return 0;
+}
+
+
+
+
+
+
+
+
+                                                         C++
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Hello world!" << endl;
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i,j;
+    int test[3][3]=
+    {
+        {1,2,3},{4,5,6},{7,8,9}
+    };
+    for(i=0;i<3;++i)
+    {
+        for(j=0;j<3;++j)
+        {
+            cout<< "test["<< i <<"]["<< j <<"]="<<test[i][j]<< endl;
+        }
+    }
+    return 0;
+
+}
+test[0][0]=1
+test[0][1]=2
+test[0][2]=3
+test[1][0]=4
+test[1][1]=5
+test[1][2]=6
+test[2][0]=7
+test[2][1]=8
+test[2][2]=9
+
+
+
+
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int test[2][3][2],i,j,k;
+    cout<<"Enter 12 values: \n";
+    for(i=0;i<2;++i)
+    {
+        for(j=0;j<3;++j)
+        {
+            for(k=0;k<2;++k)
+            {
+                cin>>test[i][j][k];
+            }
+        }
+    }
+cout<<"\nDisplaying value stored : "<< endl;
+for(i=0;i<2;++i)
+    {
+        for(j=0;j<3;++j)
+        {
+            for(k=0;k<2;++k)
+            {
+                cout<<"test["<<i<<"]["<<j<<"]["<<k<<"]=" <<test[i][j][k]<< endl;
+            }
+        }
+    }
+    return 0;
+}
+Displaying value stored :
+test[0][0][0]=1
+test[0][0][1]=2
+test[0][1][0]=3
+test[0][1][1]=4
+test[0][2][0]=5
+test[0][2][1]=6
+test[1][0][0]=7
+test[1][0][1]=8
+test[1][1][0]=9
+test[1][1][1]=10
+test[1][2][0]=11
+test[1][2][1]=12
+
+
+
+
+
+
+
+#include<iostream>
+using namespace std;
+
+sum(int a, int b)
+{
+  int add=a+b;
+  return add;
+}
+int main()
+{
+    cout<<sum(25,50);
+    return 0;
+}
+
+
+
+
+
+
+
+
+#include<iostream>
+using namespace std;
+ void add(int a, int b)
+{
+    a=a+10;
+    b=b+10;
+    cout<<"Value of a = "<<a<<endl;
+    cout<<"Value of b = "<<b<<endl;
+}
+int main()
+{
+    int x=10;
+    int y=20;
+
+    add(x,y);
+
+    cout<<"Value of x = "<<x<<endl;
+    cout<<"Value of y = "<<y<<endl;
+
+    return 0;
+}
+
+
+
+
+
+
+#include<iostream>
+using namespace std;
+void Ashok()
+{
+    int var =20;
+    int *ptr;
+    ptr = &var;
+    cout<<"Value at ptr ="<< ptr<<"\n";
+    cout<<"Value at var ="<<var<<"\n";
+    cout<<"Value at *ptr="<<*ptr<<"\n";
+}
+int main()
+{
+    Ashok();
+    return 0;
+}
+
+
+
+
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    char ch[12]={'H','e','l','l','o',' ','W','o','r','l','d'};
+    string st = "Welcome to Edureka";
+    std::string std_st ="Happy Learning";
+    cout<<ch<<endl;
+    cout<<st<<endl;
+    cout<<std_st<<endl;
+    return 0;
+}
+
+
+
+
+
+
+#include<iostream>
+using namespace std;
+struct point
+{
+    int a,b;
+};
+int main()
+{
+    struct point p1={25,10};
+
+    cout<<"a ="<<p1.a<< "\nb="<<p1.b;
+    return 0;
+}
+
+
+
+
+
+#include<iostream>
+using namespace std;
+class student
+{
+    public:
+    int ID;
+    string name;
+};
+int main()
+{
+    student s1;
+    s1.ID = 11602030;
+    s1.name = "Ashok";
+    cout<<"ID\t"<<s1.ID<<endl;
+    cout<<"name\t"<<s1.name<<endl;
+    return 0;
+}
+
+
+
+
+
+#include<iostream>
+using namespace std;
+typedef union type
+{
+    int a;
+    float b;
+}
+student;
+int main()
+{
+    student x;
+    x.a = 5;
+    cout<<x.a<<endl;
+    x.b = 7.97;
+    cout<<x.b<<endl;
+    return 0;
+}
+
+
+
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i,j;
+    i=500;
+    j=i;
+    cout<<j<<endl;
+    return 0;
+}
+
+
+
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a=100;
+    if(a<200)
+    {
+        cout<<"a is less than 200"<<endl;
+    }
+    cout<<"Value of a is : "<<a<<endl;
+    return 0;
+}
+
+
+
+
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a=200, b=100;
+    if(b>a)
+    {
+        cout<<"b is greater "<<endl;
+    }
+    else
+    {
+        cout<<"a is greater"<<endl;
+    }
+    return 0;
+}
+
+
+
+
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int score;
+    cout<<"Enter your score : "<<endl;
+    cin>>score;
+    if(score>=90)
+    {
+        cout<<"A Grade"<<endl;
+    }
+    else if(score>=50&&score<90)
+    {
+        cout<<"B Grade"<<endl;
+    }
+    else if(score>=35&&score<50)
+    {
+        cout<<"C Grade"<<endl;
+    }
+    else
+        cout<<"Failed"<<endl;
+    return 0;
+}
+
+
+
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int x;
+    cout<<"Enter the x value : \n"<<endl;
+    cin>>x;
+    switch (x)
+    {
+    case 1:
+        cout<<"You opted for 1"<<endl;
+        break;
+    case 2:
+        cout<<"You opted for 2"<<endl;
+        break;
+    case 3:
+        cout<<"You opted for 3"<<endl;
+        break;
+    default:
+        cout<<"opt among 1,2,3"<<endl;
+        break;
+    }
+    return 0;
+}
+
+
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i,n=10;
+    for(i=0;i<10;i++)
+    {
+        cout<<i+1<<"\n"<<endl;
+    }
+    return 0;
+}
+
+
+
+
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n,i=1,factorial=1;
+    cout<<"Enter the number : "<<endl;
+    cin>>n;
+    while(i<=n)
+    {
+        factorial*=i;
+        i++;
+    }
+    cout<<"Factorial of number is "<<factorial<<endl;
+    return 0;
+}
+
+
+
+
+
+
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cout<<"Enter n value : "<<endl;
+    cin>>n;
+    do
+    {
+        cout<<"Value of n :"<<n<<endl;
+        n++;
+    }while(n<=10);
+    return 0;
+}
+
+
+
+
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int age;
+    cout<<"Enter the age : "<<endl;
+    cin>>age;
+    if(age>=18)
+    {
+        cout<<"Eligible to vote"<<endl;
+    }
+    else
+        {
+            cout<<"Not Eligible to vote"<<endl;
+        }
+        return 0;
+}
+
+
+
+
+
+//ENCAPSULATION
+#include<iostream>
+using namespace std;
+class test
+{
+public:
+    int x,a=10;
+    test(int a)
+    {
+        x=a;
+    }
+    int get()
+    {
+        return 0;
+    }
+};
+int main()
+{
+    test a(10);
+    cout<<"The number is : "<<a.get();
+    return 0;
+}
+
+
+
+
+#include<iostream>
+using namespace std;
+int add(int a, int b)
+{
+    cout<<a+b<<endl;
+    return 0;
+}
+int add(int a,int b,int c)
+{
+    cout<<a+b+c<<endl;
+    return 0;
+}
+int main()
+{
+    add(20,40);
+    add(10,20,30);
+    return 0;
+}
+
+
+
+
+
+                         PYTHON
+
+print("     /|")
+print("    /_|")
+print("   /__|")
+print("  /___|")
+print(" /____|")
+print("/_____|")
+
+
+     /|
+    /_|
+   /__|
+  /___|
+ /____|
+/_____|
+
+
+
+
+
+
+
+character_name = "John"
+character_age = '35'
+print("There once was a man name " + character_name + ",")
+print("he was " + character_age + "yrs old. ")
+print("He really liked the name " + character_name + ",")
+print("but didn't like being " + character_age + ".")
+character_age = '10'
+print("He has a child aged " + character_age + "yrs" )
+
+
+There once was a man name John,
+he was 35yrs old. 
+He really liked the name John,
+but didn't like being 35.
+He has a child aged 10yrs
+
+
+
+
+phrase = "Giraffe Academy"
+print (phrase + " is cool")
+
+Giraffe Academy is cool
+
+
+
+
+
+phrase = "Giraffe Academy"
+print (phrase.upper())
+Converts into upper case letters and
+ phrase.lower() converts to lower case letters
+ phrase.isupper()  shows true/false for upper case letters
+ phrase.islower() shows true/false for lower case letters
+ print(len(phrase))  prints length of the phrase
+print(phrase[i])  i is the index of the phrase{if entered 0 prints G, if entered 1 prints i}
+print (phrase.index("G"))  prints the index of letter G in the phrase
+print (phrase.replace("Giraffe", "Elephant"))  used to replace one word with another
+
+
+print(3+4.5)  prints 7.5
+print(3*4 + 5)  prints 17
+print(10 % 3)  prints remainder 1 (modulus opertor)
+
+
+num = 5
+print(str(num) + " is my favourite number")
+
+num = -5
+print(abs(num))    prints 5(absolute number)
+
+print(pow(3,2))  prints 3^2 = 9
+print(max(4,6))  prints max number 
+print(min(4,6))   prints min number
+
+
+from math import*   this is used to import more math functions
+print(round(3.7))   rounds of the number to next highest number 4
+print(floor(3.7))   rounds of the number to before number 3
+print(sqrt(36))   prints 6
+
+
+
+name = input("Enter your name : ")
+age = input("Enter your age : ")
+print("Hello " + name + "! You are " + age)
+
+Enter your name : mike
+Enter your age : 25
+Hello mike! You are 25
+
+
+
+
+//ADDITION OF TWO INTEGERS//
+num1 = input("Enter a number: ")
+num2 = input("Enter another number: ")
+result = int(num1) + int(num2)
+print(result)
+
+
+
+//ADDITION OF TWO DECIMALS//
+
+num1 = input("Enter a number: ")
+num2 = input("Enter another number: ")
+result = float(num1) + float(num2)
+print(result)
+
+
+
+
+Color = input("Enter a color: ")
+object = input("Enter the object: ")
+name = input("Enter thr name: ")
+print("Roses are " + Color)
+print(object + " is blue")
+print("I love " + name)
+
+
+
+//LISTS//
+friends = ["Kevin", "Karen", "Jim"]
+print(friends[1])    prints Karen(calling with index and printing)
+
+(if index is negative then takes from backwards)
+print(friends[-1])   prints Jim
+
+print(friends[1:])   prints all strings starting from 1
+print(friends[1:5])   prints strings from 1 to 5 excluding 5
+
+friend[1] = 'Mike'
+print(friends[1])    replaces Karen with Mike
+
+
+
+lucky_numbers = [4, 8, 15, 16, 23, 42]
+friends = ["Kevin", "Karen", "Jim", "Mike", "Toby"]
+friends.extend(lucky_numbers)    prints numbers along with friends names
+print(friends)    
+
+friends.append("Harry")   inserts Harry in friends names at the end
+
+friends.insert(1, "Harry")   inserts Harry at index 1 and remainings elemensts are pushed side
+
+friends.remove("Jim")    removes Jim from list
+
+friends.pop()    pops out last name from the list
+
+print(friends.index("Jim"))   prints index of Jim as 2
+
+print(friends.count("Jim"))    prints how many times name Jim is occuring in the list
+
+lucky_numbers.sort()   arrange the numbers in ascending order
+
+lucky_numbers.reverse()   prints the numbers after reversing
+
+ friends2 = friends.copy()
+print(friends2)     prints friends names after copying
+
+
+
+Tuple : It is a type of data structure, it is indicated between (  ), the values in the tuple cannot be changed
+Lists : It is a type of data structure, it is indicated between [  ], the values in the Lists can be changed
+(   ) - is called parenthesis
+[   ] - is called square brackets
+
+
+//Functions//
+def say_hi():
+    print("Hello User!")
+say_hi()   function calling{prints Hello User!}
+
+
+
+def say_hi(name, age):
+    print("Hello " + name + " You are " + age)
+say_hi("Mike", "35")
+say_hi("Steve", "50")   function calling( Hello Mike you are 35 || Hello Steve You are 50 )
+
+
+//RETURN STATEMENT//
+def cube(num):
+    return num*num*num
+
+print(cube(3))    returning the statement(brekas at the statement itself)
+
+
+def cube(num):
+    return num*num*num
+
+result = cube(4)
+print(result)    same as above - This is call by value
+
+Call by reference is calling a function with the address of the values.
+
+
+
+//IF STATEMENTS//
+is_male = True
+is_tall = True
+if is_male or is_tall:
+    print("You are a male or tall or both")
+else:
+    print("You are neither male nor tall")
+OUTPUT: You are a male or tall or both
+
+
+
+is_male = True
+is_tall = False
+if is_male or is_tall:
+    print("You are a male or tall or both")
+else:
+    print("You are neither male nor tall")
+OUTPUT: You are a male or tall or both
+
+
+
+is_male = False
+is_tall = False
+if is_male or is_tall:
+    print("You are a male or tall or both")
+else:
+    print("You are neither male nor tall")
+OUTPUT: You are neither male nor tall
+
+
+
+is_male = True
+is_tall = True
+if is_male and is_tall:
+    print("You are a tall male")
+elif is_male and not(is_tall):             //elseif is indicated as elif//
+    print("You are a short male")
+elif not(is_male) and is_tall:
+    print("You are not a male but are tall")
+else:
+    print("You are either not male and not tall")
+
+
+
+
+def max_num(num1, num2, num3):
+    if num1 >= num2 and num1 >= num3:
+        return num1
+    elif num2 >= num1 and num2 >= num3:
+        return num2
+    else:
+        return num3
+
+print(max_num(3, 4, 5))       //function calling//
+
+
+
+
+
+//BASIC CALCULATOR//
+num1 = float(input("Enter first number: "))
+op = input("Enter operator: ")
+num2 = float(input("Enter second number: "))
+if op == "+":
+    print(num1 + num2)
+elif op == "-":
+    print(num1 - num2)
+elif op == "*":
+    print(num1 * num2)
+elif op == "/":
+    print(num1 / num2)
+else:
+    print("Invalid operator")
+
+
+
+
+
+month_Conversions = {
+    "Jan": "January",
+    "Feb": "February",
+    "Mar": "March",
+    "Apr": "April",
+    "May": "May",
+
+}
+print(month_Conversions["Feb"])    //We can also indicate with numbers//
+
+
+
+
+
+
+
+i = 1
+while i <= 10:
+    print(i)
+    i += 1
+
+print("Done with loop")
+OUTPUT: 1 2 3 4 5 6 7 8 9 10 Done with loop
+
+
+
+
+
+num = "5"
+guess = ""
+while guess != num:
+    guess = input("Enter another number: ")
+
+print("You win")     //Guessing Number//
+
+
+
+
+num = "5"
+guess = ""
+guess_count = 0
+guess_limit = 3
+while guess != num:
+    if guess_count < guess_limit :
+     guess = input("Enter another number: ")
+     guess_count += 1
+    elif guess_count == guess_limit :
+        print("You lose")
+        break
+else :
+ print("You win")    //guessing game with 3 chances//
+
+
+
+//FOR LOOPS//
+
+for alphabets in "Giraffe Academy":
+    print(alphabets)
+OUTPUT :
+G
+i
+r
+a
+f
+f
+e
+ 
+A
+c
+a
+d
+e
+m
+y
+
+
+
+
+
+friends = ["Jim", "Karen", "Kevin"]
+for names in friends :
+    print(names)
+Output :
+Jim
+Karen
+Kevin
+
+
+for index in range(2, 5):    //not included 5//
+   print(index)
+Output : 2, 3, 4
+
+
+
+
+def raise_to_power(base_num, pow_num):
+    result = 1
+    for index in range(pow_num):
+        result = result * base_num
+    return result
+print(raise_to_power(3,5))    //function calling // prints 243//
+
+
+
+2D LISTS/ NESTED FOR LOOPS
+
+number_grid = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+]
+print(number_grid[2][1])   // given [][] row and column index inside brackets to print
+
+
+
+
+
+
+number_grid = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+]
+for row in number_grid:
+    for col in row:
+        print(col)
+OUTPUT : 1 2 3 4 5 6 7 8 9 
+
+
+
+
+GCD OF TWO NUMBERS
+a = int(input('Enter number 1 : '))
+b = int(input('Enter number 2 : '))
+if a>b :
+    small = b
+else:
+    small = a
+for i in range(1, small+1):
+    if (a % i == 0) and (b % i == 0):
+        gcd = i
+print('GCD of two numbers is ',gcd)
+
+
+
+
+
+def sentence(phrase):
+    vowel = 0
+    consonant = 0
+    for letter in phrase:
+        if letter in "AEIOUaeiou" :
+            vowel += 1
+        else :
+            consonant += 1
+    print(vowel)
+    print(consonant)
+    return
+print(sentence(input("Enter the phrase: ")))
+
+
+
+
+COMMENTS : single line comments are written with # symbol in front of the line
+           Multiple line comments are written between '''   '''
+
+
+
+
+//TRY & EXCEPT//
+try:
+    number = int(input("Enter a number: "))
+    print(number)
+except:
+    print("Invalid Input")   #if other than integers are entered then except statement is executed
+
+
+
+
+try:
+    num = 10/0
+    number = int(input("Enter a number: "))
+    print(number)
+except ZeroDivisionError:
+    print("Division by zero")
+except ValueError:
+    print("Invalid input")
+
+
+
+
+OPEN & CLOSE FILES
+
+employee_file = open("employees.txt", "r")
+ # r : read
+ # w : write   (can add and delete details)
+ # a : append  (only adds)
+ # r+ : read and write
+
+employee_file.close()
+ 
+
+
+
+employee_file = open("employees.txt", "r")    //Read details in employee.txt file//
+
+for employee in employee_file.readlines() :
+    print(employee)
+
+employee_file.close()
+
+
+
+
+//CREATING CLASSES OR OBJECTS//
+class student :
+    
+    def __init__(self, name, ID, GPA):
+        self.name = name
+        self.ID = ID
+        self.GPA = GPA
+
+    def topper(self):
+        if self.GPA >= 8:
+            return True
+
+        else :
+            return False
+
+
+
+//CONCEPTS//
+
+Single line comments - #jhcvkHAGFhkga    (Describes how the function will do)  - it doesnot vomits the comments in output
+Multiline comments - #vhvjha
+                     #haguoayg
+                     #jhlecugug
+Docstring comments - '''hgsfdkhgSFC''' (Describes what the function will do)  - it vomits the comments in output
+
+VARIABLES : jst assigning values (upper case and lower case letters have different meanings)
+eX: x = 100
+    y = 200
+    z = "EDUREKA"
+
+Datatypes: 
+  - Numbers:  integers, float, Complex, boolean(True/False)
+  - String:  x = 'hello'
+             y = "World"
+             name = "EDUREKA"
+             len(name)   -  displays length of the string
+             name[2]    -  displays the letter in the name which has index value 2
+             name[2] = 'z'  - this is not possible because strings cannot be changed
+             name[2:6]   - displays 'UREK' - from index 2-5 (excluding 6th index)
+             name.upper()  - changes to upper case
+             name.lower()   - changes to lower case
+  - List :  myList = [10,20,20,30,'edureka', 'courses']   - duplicate values can be given
+            myList[2]   - displays 30 in output
+            myList.append(10) - adds 10 at last in the output
+            myList.insert(5,100) - adds 100 in the 5th index and other values are pushed aside
+            myList.reverse()   - reverses the list
+   - Dictionary: can be changed, No duplicates present
+                 courses = { 1: 'python',
+                             2: 'data science',
+                             3: 'Java'}
+                courses[2]   - displays Data science in the output
+                courses.get(2)  - displays same data science
+                courses[3]= 'Adobe'    - replaces java with Adobe
+   - Tuple : cannot be changed, duplicate entries are present
+             animals = ('10','10','20','tiger','lion','tiger')
+             animals.count(tiger)   - shows how many times tiger is in the list
+   - SEt: duplicated are present
+         mySet= {10,20,30,'edureka'}
+         mySet(range(5))   - displays from 0-5 elements
+        
+ex: a =[1,2,3,4]
+    b =[5,6,7,8,9]
+    c =[a,b]    - displays [1,2,3,4,5,6,7,8,9] as output
+
+type conversion: can convert one type to other
+ex: x=10
+    str(x)   - this converts integer x into string
+
+
+namestuple()  - returns a tuple with a named value for each element in the tuple
+ex: Details = (name='edureka',course='python', rank=1)
+
+deque : it is an optimised list to perform insertion and deletion easily
+     from collections import deque
+      a = [1,2,3,5,6,4]
+      d = deque(a)
+      d.append(8)   - adds 8 at last                // extend and insert are also used //
+      d.appendleft(8)  - add 8 in the first
+      d.pop()   - pops out last element
+      d.popleft()   - pops out first element
+CHAINMAP: creates single view of multiple mappings
+    A={1:'edureka',2:'python'}
+    B={3:'java',4:'AI'}
+    C=ChainMap(A,B)
+ [{1:'edureka',2:'python'},{3:'java',4:'AI'} ]    -chainmap output          
+
+
+ARRAYS:
+
+import array as arr
+a=arr.array('d',[1.1,2.1,3.1])
+a.append(3.4)
+print("Array a=", a)
+a.extend([4.5,3.6,7.2])    //square brackets are used//
+print("Array b=",a)
+a.insert(2,3.4)
+print("Array c=", a)
+output:
+Array a= array('d', [1.1, 2.1, 3.1, 3.4])
+Array b= array('d', [1.1, 2.1, 3.1, 3.4, 4.5, 3.6, 7.2])
+Array c= array('d', [1.1, 2.1, 3.4, 3.1, 3.4, 4.5, 3.6, 7.2])
+
+
+a.pop(index value)   - pops the element with the given index value
+a.remove(element)     - removes the element
+
+
+array concatenation -  joining of two arrays
+array slicing  -  a[2:5]   - removes the array elements between index 2 and 5
+a[::-1]    - reverses the array elements inside and prints
+
+
+
+LOOPS THROUGH AN ARRAY:
+import array as arr
+a=arr.array('i',[1,2,3,4,5,6,7,8,9])
+for x in a:
+    print(x)
+
+
+
+
+import array as arr
+a=arr.array('i',[1,2,3,4,5,6,7,8,9])
+b=0
+while b<len(a):
+    print(a[b])
+    b +=1
+
+
+
+for loop syntax:
+   fro <variable> in <range>:
+
+
+
+Factorial code
+
+num = int(input("Number:"))
+factorial = 1
+if num<0:
+    print("Must be positive")
+elif num ==0:
+    print("factorial = 1")
+else:
+    for i in range(1,num+1):
+        factorial = factorial*i
+    print(factorial)
+
+
+
+
+//PYTHOGOREAN NUMBERS// 
+from math import sqrt
+n = int(input("Enter Maximal number: "))
+for a in range(1,n+1):  //here n+1 is not included in the range//
+    for b in range(a,n):
+        c_square = a**2 + b**2
+        c = int(sqrt(c_square))
+        if((c_square - c**2)==0):
+            print(a, b, c)
+OUTPUT:
+3 4 5
+5 12 13
+6 8 10
+
+
+
+
+
+//BOOKING TICKETS//
+travelling = input("yes or no :")
+while travelling == 'yes':
+    num = int(input("number of people travelling: "))
+    for num in range(1,num+1):
+        name =  input("Name: ")
+        age = input("Age: ")
+        gender = input("Gender - Male or Female: ")
+        print(name)
+        print(age)
+        print(gender)
+    travelling = input("Oops! forgot someone-Yes or No : ")
+
+
+
+LEAP YEAR
+n = int(input('Enter the year : '))
+if (n%100 == 0) and (n%400 == 0):
+    print('It is a leap year')
+elif (n%4 == 0):
+    print('It is a leap year')
+else:
+    print('It is not a leap year')
+
+
+REVERSING A NUMBER
+n = int(input('Enter the number: '))
+rev = 0
+while n!= 0:
+    rev = rev*10 + n%10
+    n = (n//10)
+print('Number after reversed is : ', rev)
+
+
+
+BUBBLE SORTING
+def bubblesort(a):
+    for i in range(len(a)):
+        for j in range(0, len(a)-i-1):
+            if a[j] > a[j+1]:
+                a[j], a[j+1] = a[j+1], a[j]
+
+data = [ 9, 2, 6, 8, 3, 1]
+
+bubblesort(data)
+print('Numbers after bubble sort are : ')
+print(data)
+
+
+AVERAGE OF THE NUMBERS
+n = int(input('Enter no. of elements : '))
+a = []
+for i in range(1, n+1):
+    number = int(input('Enter the numbers: '))
+    a.append(number)
+average = sum(a)/n
+print('Average of the numbers is ', average)
+
+
+
+REVERSING A NUMBER
+n = int(input('Enter the number : ' ))
+print('The number before reversing is : ', n)
+reverse = 0
+while n!=0:
+    reverse = reverse*10 + n%10
+    n = (n//10)
+print(' The number after reversing : ', reverse)
+
+
+FIBONACCI SERIES
+num1 = int(input('Enter first number: '))
+num2 = int(input('Enter second number: '))
+n = int(input('Enter number of fibonacci series required : '))
+i = 0
+while i<=n:
+    result = num1 + num2
+    print(result)
+    num1 = num2
+    num2 = result
+    i += 1
+
+
+	PALINDROME NUMBER
+n = int(input('Enter the number: '))
+rev = 0
+temp = n
+while temp!=0:
+    rev = rev*10 + temp%10
+    temp = (temp//10)
+if rev == n:
+    print('It is a palindrome')
+else:
+    print('It is not a palindrome')
+
+
+
+AREA OF THE CIRCLE
+def area(r):
+    pi = 3.14
+    return pi*(r*r)
+print('Area of the circle: ', area(5))
+
+
+PRINT 'n'th FIBONACCI NUMBER
+def fibonacci(n):
+    a = 0
+    b = 1
+    if n ==0 :
+        return a
+    elif n == 1:
+        return b
+    else:
+        for i in range(2,n):
+          c = a+b
+          a = b
+          b = c
+        return b
+
+print(fibonacci(10))
+
+
+
+
+SUM OF SQUARES OF NUMBERS
+n = int(input("Enter nth natural number : "))
+s = 0
+for i in range(1, n+1):
+    s += (i*i)
+
+print('The sum of squares of numbers is ', s)
+
+
+
+
+
+PRIME NUMBERS IN THE RANGE
+def prime(x, y):
+    prime_list = []
+    for i in range(x, y):
+        if i == 0 or i == 1:
+            continue
+        else:
+            for j in range(2, int(i/2)+1):
+                if i%j == 0:
+                    break
+                else:
+                    prime_list.append(i)
+    return prime_list
+
+starting_range = 5
+ending_range = 30
+lst = prime(starting_range, ending_range)
+if len(lst) == 0:
+    print('There are np prime numbers in the list')
+else:
+    print(lst)
+
+
+
+
+
+FINDING AVERAGE OF NUMBERS
+size = int(input('Enter number of elements : '))
+arr = []
+for i in range(0,size):
+    elem = int(input('Please give value of the index ' +str(i)+ ' '))
+    arr.append(elem)
+avg = sum(arr)/size
+print('Average of all elements is ' +str(avg))
+
+
+
+ARMSTRONG NUMBER
+import math
+n = int(input('Enter the number: '))
+temp = n
+arm = 0
+l = len(str(n))
+while temp!= 0:
+    a = (temp%10)
+    arm = arm + pow(a, l)
+    temp = (temp//10)
+if arm == n:
+    print('It is an armstrong number')
+else:
+    print('It is not an armstrong number')
+
+
+
+PRIME NUMBER
+n = int(input('Enter the number : '))
+count = 0
+i = 0
+for i in range(2,n//2):
+    if n % i == 0:
+        count += 1
+if count == 1:
+    print('It is not a prime number')
+else:
+    print('It is a prime number')
+
+
+FACTORIAL OF THE NUMBER
+n = int(input('Enter the number: '))
+fact = 1
+for i in range(1,n+1):
+    fact = fact*i
+    i += 1
+print('Factorial of a number is ',fact)
+
+
+LCM OF TWO NUMBERS
+def LCM(x, y):
+    if x > y:
+        large = x
+    else:
+        large = y
+    while large != 0:
+        if ((large % x == 0) and (large % y == 0)):
+            LCM = large
+            break
+        large += 1
+    return LCM
+LCM = LCM(6, 10)
+print('The LCM is ', LCM)
+
+
+
+
+FINDING SUM OF ARRAY
+def sum(arr):
+    sum=0
+    for i in arr:
+        sum+=i
+    return sum
+arr = []
+arr = [2, 3, 6, 5, 9]
+print(sum(arr))
+
+
+
+FINDING ELEMENT IN THE LIST
+lst = [1,6,2,3,5,8,9]
+i = int(input('Enter the number to find : '))
+if i in lst:
+    print('exists')
+else:
+    print('Does not exists')
+
+
+
+list_name.clear()   - helps to clear the elements in the list
+list_name.reverse()  - helps to reverse the elements in the list
+new_list = list_name[ : : -1]   - helps to reverse the list
+[a : b : c] = indicates [start : stop : step]
+list_name.sort()   - sorts the list in ascending order
+list_name.remove(element)    - removes the element from the list
+new_list = list_name.copy()   - copies the elements to new list
+
+
+FINDING SUM OF THE ELEMENTS IN THE LIST
+lst = [2,6,5,6,9,8,2,3,1,0]
+size = len(lst)
+sum = 0
+for i in range(0,size-1):
+    sum += lst[i]
+print(sum)
+
+
+
+
+FINDING MAXIMUM NUMBER IN THE ARRAY
+arr = [2, 6, 3, 9, 1]
+for i in range(0, len(arr)-1):
+    if arr[i]> arr[i+1]:
+        max = arr[i]
+    else:
+        max =arr[i+1]
+print('Max number in the array is ',max)
+
+
+
+SWAPPING FIRST AND LAST ELEMENTS OF THE LIST
+lst = [1,6,2,3,5,8,9]
+size = len(lst)
+temp = lst[0]
+lst[0] = lst[size-1]
+lst[size-1] = temp
+print(lst)
+
+
+
+PRINTING CURRENT date and TIME
+import datetime
+current_time = datetime.datetime.now()
+print(current_time)
+
+
+
+
+
+
+Lambda Functions : Anonymous or nameless functions used for temporary operations
+(throw away functions)
+syntax:   lambda arguments: expression
+ex: x= lamda a: a*a
+    x(3)    prints 9
+ex: def new(a):
+       return a*a
+    new(3)   //general method//
+ex: def A(x):
+       return (lambda y : x+y)
+    t=A(4)
+    print(t(8))    prints 12
+
+
+
+LAmbda within filter()  - used to filter the given iterables(lists, sets) with the help of another function passed as an argument.
+syntax: filter(function, iterables)
+ex: my_list = [1,2,3,4,5,6]
+    newlist=list(filter(lambda a: (a/3 == 2), my_list))
+    print(newlist)     prints 6, as 6/3==2
+
+Lambda for Algebra
+ex: d= lambda x, y: 3*x+4*y
+    d(4,7)
+ex: x= lambda a, b: (a+b)**2     // x**y indicates x^y
+    x(3,4)
+
+
+MAP FUNCTIONS = applies a given function to all the iterables and return a new list
+ex: output = map(lambda x:x+3, [1,2,3,4])
+
+FILTER FUNCTIONS = used to filter the given iterables lists, sets with the helpof another function passed as an argument
+ex: output = map(lambda x: (x>=3) , [1,2,3,4,5,6])
+    prints only those numbers which ar greater than or equal to 3
+
+REDUCE FUNCTIONS   = Applies some other functions to a list of the elements thatbare passed as aparameter to it and finally returns a single value
+
+
+FILTER WITHIN MAP FUNCTIONS:
+c=map(lambda x:x+x, filter(lambda x:(x>=4), [2,3,4,5,6]))
+MAP WITHIN FILTER FUNCTION:
+c=filter(lambda x:(x>=4), map(lambda x:x+x, [2,3,4,5,6]))
+
+
+#There are two types of files available in python. They are text and binary files
+
+FILE HANDLING:
+f = open('file_name', 'r')  - opens the specified file in the read mode
+print(f.read())             - displays all the lines in the file
+print(f.readline())         - displays first line in the file
+print(f.readline(5))        - displays only 5 characters in the first line of the file
+print(f.name)              - displays file name
+f.close()                  - closes the file that is opened
+print(f.mode)              - displays the mode of file in which it is opened r/w/a..etc
+
+
+import os
+f = open(r'file_path', 'w')   - opens the files from local machine in write mode
+f = open(r'file_path', 'x')   - creates new file in the specified path (r indicates raw string)
+
+
+f = open('abc', 'w')         - opens abc file in write mode, if abc not exists, it creates new abc file
+f.write('laptop is mine')    - it writes the content into the file abc
+
+f = open('abc' , 'a')        - opens abc file in append mode
+f.write('Device')            - adds'device' to the abc file
+
+'r' - read mode
+'w' - write mode
+'a' - append mode
+'rb' - read binary -for JPG,audio..etc - files other than text file
+'wb' - write binary  -for JPG files
+'x' - creating new file
+'r+' - read and write
+'w+' - write and read
+'a+' - append and read
+
+
+f = open('file_name', 'r')
+l = f.readlines()
+print(len(l))              - displays number of lines exists in the file
+
+
+
+COPYING DATA FROM ONE FILE TO ANOTHER:
+f = open('xyz', 'r')        - it first opens xyz file in read mode
+f1 = open('abc', 'w')       - it opens abc file in write mode
+for data in f:
+    f1.write(data)          - it copies entire data of f in f1
+
+
+with open('abc', 'r') as f:
+  with open('xyz', 'w') as f1:
+     for data in f:
+         f1.write(data)   - it copies entire data of f in f1
+
+
+import os
+f = open(r'C:\Users\HP\Downloads\IMG_5974.jpg', 'rb')
+f1 = open('Image.jpg', 'wb')         - this creates new jpg file
+for data in f:
+    f1.write(data)        - this copies data from specified path into image.jpg 
+
+
+
+METHOD 2:   This helps in closing the file automatically when we exit the block of code
+with open('file_name', 'r') as f:     - we wounld not be able to do any operation after coming out of the block of code
+  
+
+with open('abc', 'r') as f:
+    f1 = f.read()     - read the file 'f' and displays
+    print(f1)
+
+
+with open('abc', 'r') as f:
+    for line in f:       - This also displays all the lines in the file
+       print(line)
+
+
+with open('abc', 'w') as f:
+   f.write('TEST')
+   f.seek(0)
+   f.write('R')     - replaces the first index as 'R' and displays 'REST' in abc file
+
+
+
+***Pandas in Python***
+
+Pandas is used for data manipulation, analysing and cleaning
+
+Installing pandas:
+1. from pycharm type command "pip install pandas"
+2. add pandas library in pychram
+3. anaconda prompt - conda install pandas (jupyter)
+
+Dataframes: It is a two-dimensional, potentially hetrogeneous tabular data.
+Represented in the from of rows and columns.
+
+
+
+
+
+**DATA CLEANING IN PYTHON**
+- Analysing and exploring the data (.csv, .xlsx, .json, sql)
+- filtering the data (rows/columns)
+- Update and Modify data within dataframes
+- add/remove rows and columns in the dataframe
+- sorting the data
+- grouping and aggregating data as per requirement
+- Cleaning the data (handling missing data or null values)
+- reading and writing data to different sources
+
+
+
+
+import pandas as pd      //libraries
+import numpy as np
+import seaborn as sns
+import os
+%matpotlib inline       //to plot the data in a chart
+
+
+
+# - can give comments in between the lines
+print(os.listdr())     //lists the existing directories
+df = pd.read_csv('file name')
+df = pd.read_excel('file name')
+df = pd.read_json('filename')
+df                    //displays the dataframe
+df.shape              //gives the (rows,columns)
+df.info()             //gives info of datatypes, memory, nullvalues, etc.
+df.head()             //displays first n rows of the dataframe
+df.tail()             //displays last n rows of the dataframe
+df1 = df...any operation    //saves the changes in df1
+df = pd.read_csv('filename, encoding='latin')  //encoding error or inconsistent rows
+df.columns              //displays column names
+df.columns = ['first_name', 'last_name', 'email']    //renames the all columns
+df.rename(columns = {'existing_name':'new_name'})   //renames the particular column name
+df['column']            //can display the column values
+df[['column2', 'column3']]  //displays only column2 and column3
+df.iloc[0]              //displays the first row values
+df.iloc[[0, 1]]         //displays first and second rows
+df.iloc[0 : 3].values    // displays the values of columns from index 0 to 3
+df.loc[0, 'mail']       //displays mail of the first row
+df.loc[[0,1], 'email']   //displays email values of first two rows
+df.loc[2, ['name', 'email']  //displays the name and email of the row with index-2
+df.loc[2, 'name'] = 'smith'  //changes the name of row (index2) with smith
+df.loc[2] = ['john', 'smith', 42]   //changes the data of row with index-2
+df.columns.str.upper()  //changes column names to UPPER case
+df['email'].str.lower()  //changes the particular email column into lower_case
+null_values = ["N/A", "NA"]   //we can define the null values
+df.isnull()                  //checks for null data and displays true/false
+df.isnull().any()           //checks for null in columns and displays true/false
+df.isnull().any().any()     //checks entire dataframe for null and displays true/false
+df.isnull().sum()           //checks for null in columns and displays number
+df.isnull().sum().sum()     //checksfor null in entire dataframe and displays total number
+df.fillna(0)                //fills the null with value '0'
+df.fillna(method = 'ffill')  //fills the null values with the above value
+df.fillna(method = 'bfill')  //fills the null values with the below value
+df.interpolate()            //interpolates the values in place of null
+df['column_name'].mean()    //displays the mean of that particular column
+df.column_name.fillna(df['column_name'].mean())   //fill the null values with the obtained mean
+df.dropna()                 //drops the rows which contains null values
+df.dropna(how='any')        //drops the rows if it has null value anywhere
+df.dropna(how='all')        //drops the rows only if it has entire null values
+df.dropna(thresh=3)         //drops the rows if it has 3 null values
+df_new = df.dropna()        //save the changed dataframe in new df
+df.dropna(axis='columns', how='all)     //drops the columns only if it has entire null values
+#axis = index    //considers rows
+df.dropna(subset=['last_name', 'email'])        //checks for null values in those columns and drops
+df.replace('NA', np.nan, inplace=True)          //replace the NA values with NAN and 'inplace=true' will save the operation there itself
+df['column1'].unique()               //displays the unique values in column1
+
+
+df1 = pd.DataFrame(data={
+       "Temperature":[1,np.nan,3,2,3],       //column1 inputs
+       "Humidity": [22,np.nan,2,np.nan,22]   //column2 inputs
+    })       //This way we can create a dataframe
+
+
+df.fillna({
+    "column1": 999
+ })              //fills the null values in column1 as 999
+
+
+df.duplicated()         //checks for duplicate rows and prints boolean values(true/false)
+df.drop_duplicates()    //deletes duplicated rows
+df = pd.read_csv('filename', dtype={'column1':float})   //changes the datatype of the column1
+df.dtypes               //gives the output of existing datatypes
+df.column_name.dtypes    //gives the datatype of that particular column
+df.column_name.astype(float).dtypes    //changes the column datatype to float
+df['column1'] == 'john'        //checks for john in the column1 and displays true/false
+filt = (df['column1'] == 'john')  //filters the name john in column1
+filt = (df['first_name'] == 'john') & (df['last_name'] == 'smith')   //filters the columns with firstname john and lastname smith
+#similarly '|' indicates 'Or'
+df[filt]                 //displays the dataframe after applying the filters
+
+
+marks = [55, 60, 81, 90]
+filt = df['mark'].isin(marks)    //displays only the rows which have only those marks
+df[filt]              //displays the filtered dataframe
+df.loc[filt, 'mark']   //displays the only 'mark' column which is filtered
+
+
+
+filt = df['country'] == 'India'
+df.loc[filt]                //displays the data with repective to country 'India'
+df.loc[filt]['SocialMedia'].value_counts()      //shows the count of socialmedia in the country 'India'
+
+
+d = pd.data_range('202000301', periods = 10)      # creates the dates from 2020-03-01 to 2020-03-10
+
+
+df = pd.DataFrame(data = {
+    "player_name": ['thala', 'hardik', 'king', 'Hitman'],
+    "player_jersey": [7, 33, 18, 45],
+    "debut_year": [2007, 2016, 2011, 2010],
+    "Age": [39, 30, 33, 34],
+    "retirement_year": [2021, np.nan, np.nan, np.nan]
+})            //data creation
+
+
+
+people = {
+    "first": ["Karen", "Lucy", "snoopy"],
+    "number": [1, 2, 4]
+}
+df3 = pd.DataFrame(people)      //initially creating data and then importing
+
+
+
+#apply - is used to apply the function
+df['email'].apply(len)    //displays the length of the data in the email column
+df.apply(len)             //shows how many values are there in each column
+len(df['email'])          //shows the length of email column(total values)
+df.applymap(len)          //applies the functon to each individual cell and displays the length
+df['name'].map({'chris' : 'john', 'kim' : 'mary'})   //replaces the names in name column
+df.rename(columns={'chris' : 'john'}, inplace=True)   //renames the column data 
+#inplace = True  - this actually saves the changes and continue with changes
+df['eligible'].map({'Yes' : True , 'No' : False})   //changes the yes/no values with boolean values in eligibility column
+
+
+def new_format(email):
+    return email.upper()         //defining the function
+df['email'].apply(new_format)    //applying the function and displys the email with upper_case 
+
+
+
+df['full_name'] = df['first_name'] + '  ' + df['last_name']    //adds a new columns and displays the values
+df.drop(columns = ['column1', 'column2'])   //drops the both columns from dataframe
+df['full_name'].str.split(' ')             //spilt the full_name column with a space
+df.append({'first':'Tony'})                //adds a new row with first name as Tony rest else as NaN
+df1.append(df2)                             //adds Dataframe2 with Dataframe1
+df.drop(index=4)                           //drops the row with index=4
+
+
+filt = df['last_name'] == 'John'
+df.drop(index=df[filt].index)       //drops the rows which have last_name as John
+
+
+df.sort_values(by = 'last_name')    //sorts the entire dataframe based on the alphabetical order of the last_name
+df.sort_values(by = 'last_name', ascending = False)     //sorts in descending order
+df.sort_values(by = ['column1', 'column2'])            //sorts both the columns in ascending order
+df.sort_values(by = ['column1', 'column2'], ascending = [False, True])   //sorts column1 in descending order and column2 in ascending order
+#if we add 'inplace = True' at the end it will save the dataframe and continues further
+df['column1'].sort_values()       //sorts the column1 values and displays only those values
+df['salaries'].nlargest(10)       //displays only the top 10 highest salaries in the dataframe
+#similarly "nsmallest" is used for the least values              
+
+
+
+
+df.median()                             //gives the median values of all the numerical columns
+df['column_name'].median()              //gives the median value of the column
+df.describe()                           //gives all the stats of dataframe i.e. count, mean, std deviation, min, max values
+df['column_name'].count()               //gives the total count of the column
+df['eligibility'].value_counts()        //gives the count of yes/no in eligilibity column
+df['column_name'].value_counts(normalize=True)   //entire column data is displayed in percentage
+
+df['SocialMedia'].loc['India'].value_counts()    //shows the count of socialmedia in the country 'India'
+
+df['Salaries'].loc['India'].median()             //shows the median salary of Indian Country
+df['Salaries'].agg(['mean', 'median'])           //shows the aggregate mean and median data of salaries
+df['Salaries'].loc['India'].agg(['mean', 'median'])   //shows the aggregate mean and median data of salaries in Indian country
+
+df.rename(columns={'country':'Nation'})          //renames the column_names
+df['column3'] = (df['column1']/df['column2'])*100      //shows the percentage of column1&2 in column3
+
+
+df['2019']                         //displays the data of 2019 only
+df['2019']['saving']               //displays the savings data in the year 2019
+df['2019']['savings'].mean()       //displays the mean of that savings data in the year 2019
+df['2015' : '2020']                //gives data from 2015 to 2020
+df['date'].dt.day_name()           //displays the day name of that particular date
+df['date'].min()                   //oldest date in the dataframe displays
+df['date'].max()                   //latest date in the dataframe displays
+df['date'].max() - df['date'].mix()    //displays the time period between
+
+
+
+filt = (df['date'] >= '2020')          //filters the data after 2020
+df.loc[filt]                           //displays the filtered data
+
+
+
+%matplotlib inline
+salaries.plot()            //plot the salaries data in a chart
+
+
+
+new_df.to_csv('data/modified.csv)     //saves the new filtered/modified dataframe in the specified path
+new_df.to_excel('data/modified.xlsx')   //saves in excel format
+new_df.to_json('data/modified.json')    //saves in json format
+
+
+
+
+
+
+
+**JSON manipulation with python**
+
+data_string = ''' _lists_objects_etc_ '''     #entire JSON string is represtened in triple quotes
+new_data = json.loads(data_string)    # converts JSON string type objects into python dictionary
+print(type(new_data))          # displays the type of data after converting into python
+
+'loads' - load string - used to load python data from JSON strings
+'dumps' - dump string - used to dump python data into JSON string
+'load' - load - used to load python data from a file
+'dump' - dump - used to dump python data into a file
+
+
+// JSON objects are converted into python dictionary
+// JSON arrays are converted into python lists
+// The data in JSON is converted to python inorder to manipulate/modify
+// This python data is again converted back to JSOn inorder to use it in API
+
+
+print(new_data["items"])      # prints the data in the items
+print(new_data["items"]["list"])    # prints the list data in the items
+print(new_data["items"]["list"]["name"])    # prints all the name objects in the list in the specified items
+print(new_data["items"]["list"][2])       # prints second index values in the list
+
+modified_data = new_data["items"]["list"]["name"]    #saves all the names in modified_list
+print(modified_data)        # prints modified data
+
+
+
+Example 1:
+
+data = json.loads(states_string)        #loads the states_string JSON objects into python data 
+print(type(data))                       # prints type of data in python as 'dict'
+print(type(data["states"]))             # prints type of states data in python as 'list'
+for state in data['states']:
+    print(state['name'], state['abbreviation'])    # prints only name and abbreviation in states list
+
+for state in data['states']:
+    del state['abbreviation']            # deletes the objects in the list
+new_string = json.dumps(data)            # converts the python data back to JSON string objects
+
+new_string = json.dumps(data, indent = 2, sort_keys = True)    # 'indent' helps the data to display in JSON format after convertion
+                                                               # 'sort_keys' helps the data to sort in alphabetical order while displaying
+
+print(type(new_string))                  # displays the type of new_string as 'str'
+print(new_string)                        # prints new_string
+
+
+
+Example 2:
+
+import json 
+
+with open('states.json') as f:  # opens the existing JSON file and reads inside file 'f'
+  data = json.load(f)          # convert JSON into python dictionary
+
+for state in data['states']:
+  del state['area_codes']        # deletes area codes from states list
+
+with open('new_states.json', 'w') as f:     # helps to write back the data inside the file 'f'// 'w' indicates write mode // 'r' indicates read mode
+  json.dump(data, f, indent=2)              # convert the python data back to JSON file 'f'
+                                            # indent is used to display the data in JSON format after convertion
+
+
+
+
+
+Example 3:
+
+import json
+from urllib.request import urlopen
+
+with urlopen("https://finance.yahoo.com/webservice/v1/symbols/allcurrencies/quote?format=json") as response:
+    source = response.read()             # reads all the responses from the URL into the source  
+print(source)           # prints the data in the source
+
+data = json.loads(source)
+
+print(json.dumps(data, indent=2))     # prints in the JSON format with indentation as 2
+print(len(data['list']['resources'])  # counts the total resources in the list and prints 
+
+usd_rates = dict()         # empty dictionary
+for item in data['list']['resources']:
+    name = item['resource']['fields']['name']
+    price = item['resource']['fields']['price']
+    usd_rates[name] = price
+
+print(name, price)                       # prints only the name and prices in the list
+print(usd_rates['USD/INR'])               # prints the price given in USD/INR
+print(50 * float(usd_rates['USD/INR']))   # calculates and prints
+
+
+
+***API*** - Application programming interface acts like a mediator between the client and the server
+- users can retrive/ send data in JSON 
+- web APIs will always have updated data 
+
+#HTTP methods:
+post - creates data to the server
+get - reads the data from the server
+put - updates the data onetime
+delete - delete the data from the server
+
+
+#Response status codes
+1xx = informational
+2xx = Success
+3xx = Redirectional
+4xx = Client error
+5xx = Server error
+
+
+
+
+
+***Requests*** - helps to get data from  webpages i.e. HTTP/HTTPS url
+
+import requests
+r = requests.get('https:url')        # 'r' is the response
+print(r)        #displays total responses count
+print(dir(r))   # we can see all the attributes and methods in the url page
+print(r.text)      #prints the text that exists in the url page
+print(r.headers)    #gets all the headers in the url
+print(r.cookies)    #allows cookies inside webpge
+print(r.status_code)   #gets the response status_code of the webpage
+
+
+#get request - reads
+payload ={'page':2, 'count':25}          # passing parameters inside URL
+r = requests.get('Url/get', params = payload)
+print(r.text)           #gets the text in with all the objects in the webpage
+print(r.url)            #gets correct url including payload
+
+
+#post request   - creates 
+payload = ('username': 'ukgdasd', 'password': 'hjgcjsk')
+r = requests.post('Url/post', data = payload)
+print(r.text)
+print(r.json())        #displays the data in JSON format
+   
+
+
+***OS module***  - in Jupyter
+import os
+
+os.getcwd()    #gets current working directory(cwd)  ex: /users/ashok/desktop/module-os
+os.chdir(r"/users/ashok/desktop/downloads")       #changes the directory with the required path
+f = open("dog.txt")     #opens the txt file in the path directory
+os.mkdir('new folder')             # creates new file - mkdir is make directory
+os.mkdir('new folder/sub-folder name')      #creates new and sub folders
+os.rmdir('foldername')                #removes directory only it is empty
+print(os.listdir())             #shows the files and folders that exists in the '/desktop/downloads'
+os.rename('old name', 'new name')   #renames
+os.environ.get('HOME')              # gets the HOme environment
+os.path.join('C:/', '/dog.txt')     # joins both the paths
+os.path.exists('program files'))    # checks if exists and displays true/false 
+os.makedirs("A/B/C/D")        # to create multiple directories
+os.removedirs("A/B/C/D")      # removes multiple directories
+os.stat("filename").st_size     # displays the size of file in KBs
+
+for root, directory, file in os.walk(os.getcwd()):      #walks through the CWD and gets output as required    
+   print(root)     #prints from roots
+   print(dir)      # prints only directories
+   print(file)     #prints all the files
+
+
+for root, directory, file in os.walk(os.getcwd()):
+   for f in file:
+      if ".csv" in f:
+          print(f)       #prints .csv files
+
+
+
+
+for root, directory, file in os.walk(os.getcwd()):
+   for f in file:
+      if f.endswith('.csv'):
+          new_df = new_df.append(pd.read_csv(f))      - it adds the csv files into one file
+new_df.to_csv('modified.csv', index = false)          - uploaded to new file
+
+
+
+for root, directory, file in os.walk(os.getcwd()):
+     for f in file:
+          if f[0] == "S":
+              print(f)      # prints the files starting with the word 'S'
+
+
+
+***GLOB module in python*** - jupyter
+- glob module finds all the files matching pathnames in a specified pattern in the directory
+- helps to list out the files in specified pattern
+- glob = global module
+
+import glob
+glob.glob("my_folder/*")                # gets all the files which have that specified path
+glob.glob("my_folder/*.png")            # gets all the png files which have that specified path
+glob.glob("my_folder/[0-9]*.txt")       # gets the txt files starting the name with integer
+glob.glob("my_folder/**/*.png", recursive = True)         # '**/*' indicates the access to sub directories
+
+   
+for file in glob.glob(*.png)
+   print(file)
+
+
+
+SSH : Secure socket Shell, is a network protocol that provides a secure way to access a remote computer. (PORT 22)
+Secure shell provides strong authentication and secure encrypted data communications between two computer connecting over an insecure network such as the internet.
+
+BASE64 : This module is used to encode and decode data. Human understandable to machine level language.
+-Gets ASCII(American standard code for information interchange) values for each character in the string
+-Compute the 8-bit binary equivalent of the ASCII values
+-Using this it encodes Base64 values from the table
+
+ASCII values : 48-57 : 0-9 | 65-90 : A-Z | 91-122 : a-z  
+
+Base64 values : 0-25 : A-Z | 26-51 : a-z | 52-61 : 0-9
+
+
+Subprocess : It is used to run new code and applications by creating new processes. 
+To run external programs from a git repository, we can use subprocess in python
+subprocess.call() is used to initiate the new process
+
+
+
+
+
+
+
+
+
+CARS.CSV FILE PRACTICE
+
+import pandas as pd
+df = pd.read_csv('CarInventory.csv')
+# df = pd.read_excel('CarInventory.xlsx')
+
+
+
+# 1) Sort Rows According to a column
+df = df.sort_values(['Miles'], ascending=False)
+df.reset_index(drop=True, inplace=True)
+
+
+# 2) Create Column [No Conditions]
+# df['Age till 2021'] = 21 - df['Mfg Year']
+
+# Create Column [With Conditions]
+def condition(row):
+    if row['Mfg Year'] >= 0 and row['Mfg Year'] <= 21:
+        return 21 - row['Mfg Year']
+    else:
+        return 21 + (100 - row['Mfg Year'])
+
+df['Age till 2021'] = df.apply(condition, axis=1)
+
+
+
+# 3) Rearrange column
+df = df[['Car ID','Maker','Model','Model Full Name','Mfg Year','Age till 2021','Miles','Covered?']]
+
+# Rearrange column [List Slicing Method]
+# cols = list(df.columns)
+# df = df[cols[0:5] + [cols[-1]] + cols[5:7]]
+
+
+# 4) Conditional changes
+df.loc[df['Model Full Name'] == 'Camery', 'Model Full Name'] = 'Cameri' # wherever 'Model Full Name' = Camery, change it to Cameri
+
+df.loc[df['Model Full Name'] == 'Silverado', ['Model', 'Maker']] = ['SLR', 'GM'] # Multiple values get changed
+
+df.loc[(df['Maker'] == 'Honda') & (df['Miles'] >= 50000), 'Covered?'] = 'Not Covered' # Multiple conditions
+
+
+
+# 5) Add New Row
+data = [{'Maker': 'Honda', 'Model': 'GLS'}]
+df = df.append(data, ignore_index=True)
+
+
+
+# 6) Delete Row
+df.drop(df[df['Model'] == 'GLS'].index, inplace=True)
+print(df)
+
+
+
+# Save Changes
+df.to_csv('modified.csv', index=False)
+
+
+
+
+
+
+
+PLOTTING GRAPHS
+import matplotlib.python as plt
+df = pd.read_csv('filename')
+x = df['Model']
+y = df['Price']
+plt.xlabel('Model')
+plt.ylabel('Price')
+plt.bar(x, y)     - plots bar graph
+
+plt.scatter(x, y)  - scatters the points
+plt.plot(x, y)     - joins the scattered points with line
+
+
+
+
+
+CLOUD : cloud is a network of servers that are placed around the globe. 
+The servers can store, manage, and run applications.
+Any user can access cloud from anywhere in the world connected to the internet.
+There are 4 layers in the cloud: Hardware -> Infrastructure -> Platform -> Software
+
+Benefits: accessibility, cost-effectiveness, security, flexibility, scalability.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
